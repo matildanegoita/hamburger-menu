@@ -1,4 +1,3 @@
-/* Stiluri generale */
 body, html {
     margin: 0;
     padding: 0;
@@ -18,7 +17,6 @@ nav {
     position: relative;
 }
 
-/* Stiluri pentru meniul principal */
 .menu {
     list-style-type: none;
     padding: 0;
@@ -36,7 +34,7 @@ nav {
     padding: 15px;
     display: block;
     text-decoration: none;
-    cursor: pointer; /* Adaugă un cursor pointer pentru linkurile de meniu */
+    cursor: pointer; 
 }
 
 .menu li a {
@@ -46,14 +44,14 @@ nav {
 }
 
 .menu li a:hover {
-    background-color: #444; /* Schimbă culoarea la hover */
+    background-color: #444; 
 }
 
-/* Submeniurile de nivel 1 și 2 */
+
 .submenu {
-    display: none; /* Ascunde submeniurile implicit */
-    position: absolute; /* Poziționează submeniul absolut față de părinte */
-    top: 100%; /* Submeniul va apărea dedesubt */
+    display: none; 
+    position: absolute; 
+    top: 100%; 
     left: 0;
     background-color: #444;
     list-style-type: none;
@@ -77,21 +75,18 @@ nav {
     background-color: #555;
 }
 
-/* Submeniu de nivel 2 */
 .submenu .submenu {
-    position: absolute; /* Submeniul de nivel 2 apare în dreapta */
+    position: absolute; 
     top: 0;
     left: 100%;
 }
 
-/* Eliminăm afișarea la hover */
 .menu li:hover > .submenu {
-    display: none;
+    display: block;
 }
 
-/* Responsivitate pentru mobil */
 .menu-toggle {
-    display: none; /* Ascunde butonul hamburger pe desktop */
+    display: none; 
     cursor: pointer;
 }
 
@@ -109,28 +104,27 @@ nav {
 }
 
 .menu-toggle.active span:nth-child(2) {
-    opacity: 0; /* Ascunde linia din mijloc */
+    opacity: 0; 
 }
 
 .menu-toggle.active span:nth-child(3) {
     transform: rotate(45deg) translate(-6px, -6px);
 }
 
-/* Stiluri responsive pentru meniuri pe mobil */
 @media (max-width: 768px) {
     .menu {
-        display: none; /* Ascunde meniul implicit */
+        display: none; 
         flex-direction: column;
         background-color: #333;
     }
 
     .menu.open {
-        display: flex; /* Afișează meniul când este activat */
+        display: flex;
     }
 
     .menu li {
         width: 100%;
-        border-bottom: 1px solid #444; /* Linie de separare între elementele de meniu */
+        border-bottom: 1px solid #444; 
     }
 
     .menu li a {
@@ -138,26 +132,26 @@ nav {
     }
 
     .submenu {
-        position: relative; /* Poziționează submeniurile relativ pe mobil */
+        position: relative; 
         top: 0;
         left: 0;
         background-color: #444;
-        padding-left: 15px; /* Adaugă indentare pentru submeniuri */
+        padding-left: 15px; 
     }
 
     .submenu .submenu {
-        position: relative; /* Elimina poziționarea absolută pe mobil */
-        padding-left: 30px; /* Indentare suplimentară pentru submeniul de nivel 2 */
+        position: relative; 
+        padding-left: 30px; 
         top: 0;
         left: 0;
     }
 
     .menu li.show > .submenu {
-        display: block; /* Afișează submeniul la clic */
+        display: block; 
     }
 
     .menu-toggle {
-        display: block; /* Afișează butonul hamburger pe mobil */
+        display: block; 
         padding: 15px;
     }
 }
